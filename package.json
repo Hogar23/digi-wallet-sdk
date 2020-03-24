@@ -24,7 +24,7 @@
     "digi-wallet",
     "sdk"
   ],
-  "author": "Petar Lazarevic",
+  "author": "Petar Lazarevic <petar.lazarevic23@gmail.com>",
   "license": "ISC",
   "directories": {
     "example": "examples",
