@@ -27,7 +27,9 @@
   "author": "Petar Lazarevic",
   "license": "ISC",
   "directories": {
-    "example": "example"
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -51,5 +53,13 @@
     "axios": "^0.19.2",
     "md5": "^2.2.1",
     "xml2js": "^0.4.23"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hogar23/digi-wallet-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hogar23/digi-wallet-sdk/issues"
+  },
+  "homepage": "https://github.com/Hogar23/digi-wallet-sdk#readme"
 }
