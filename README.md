@@ -1,4 +1,4 @@
-# digi-wallet
+# digi-wallet-sdk
 
 > This is NodeJS SDK for [DigiWallet](https://www.digiwallet.nl) payment system. DigiWallet provides the link between payment methods and your application. This SDK provides easy approach and usage of DigiWallet API  
 
