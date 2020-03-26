@@ -59,8 +59,8 @@ export default class Transaction {
         lang: this._language ? this._language : this.languages[0],
         currency: this._currency ? this._currency : this.currencies[0],
 
-        userip: '127.0.0.1',
-        domain: 'https://staging-customer01.chit-chat.site',
+        // userip: '127.0.0.1',
+        // domain: 'https://staging-customer01.chit-chat.site',
 
         salt: this.salt,
         ver: this.version,

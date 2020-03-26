@@ -25,8 +25,8 @@ For detailed explanation on how things work, check out [DigiWallet API documenta
 ## Example
 ```js
 const options = {
-    // outletId is Id provided by DigiWallet
-    outletId: APP_ID,
+    // appID is ID provided by DigiWallet
+    appId: APP_ID,
 
     // returnUrl is url for redirect after a (successful) payment.
     returnUrl: RETURN_URL,
