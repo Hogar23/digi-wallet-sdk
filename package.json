@@ -1,6 +1,6 @@
 {
   "name": "digi-wallet-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "DigiWallet SDK for NodeJS",
   "main": "./lib/index.js",
   "scripts": {
