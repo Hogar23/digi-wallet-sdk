@@ -15,17 +15,16 @@ export default class BankWire extends Transaction {
 
 
     beforeStart(request) {
-        const valid = this.ValidateEmail(this.email);
+        const valid = this.validateEmail(this.email);
         if (valid) {
             request.bind('email', this.email);
-        }
-    }
-
-    ValidateEmail(mail) {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+        } else {
             throw new Error('Email validation failed');
         }
-        return true;
+    }
+    validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 }
 // module.exports = Sofort;

@@ -56,10 +56,9 @@ describe('Ideal', () => {
 });
 
 const BankWire = DW.bankWire();
-
-
 BankWire.amount = 1000;
 BankWire.description = 'test desc';
+BankWire.email = 'test@email.com';
 BankWire.outletId = 143835;
 
 describe('BankWire', () => {
@@ -67,7 +66,7 @@ describe('BankWire', () => {
     assert(BankWire.appId === 'dw_example_sdk_1.0.11', 'app id is changed');
       BankWire.start().then((data) => {
       assert(data.status === true, 'BankWire payment initiation');
-      Ideal.check().then((checkData) => {
+          BankWire.check().then((checkData) => {
         assert(checkData.status === false, `Ideal payment is failed: ${checkData.error}`);
       });
     });

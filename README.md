@@ -20,6 +20,7 @@ For detailed explanation on how things work, check out [DigiWallet API documenta
 # Creditcard
 # Ideal
 # Paypal
+# BankWire
 ```
 
 ## Example
