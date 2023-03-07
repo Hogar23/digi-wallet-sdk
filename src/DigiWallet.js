@@ -5,6 +5,7 @@ import Bancontact from './Methods/Bancontact.js';
 import Creditcard from './Methods/Creditcard.js';
 import Ideal from './Methods/Ideal.js';
 import Paypal from './Methods/Paypal.js';
+import BankWire from './Methods/BankWire.js';
 
 export default class DigiWallet {
   constructor(options) {
@@ -80,6 +81,17 @@ export default class DigiWallet {
     ideal.appId = this.appId;
 
     return ideal;
+  }
+
+  bankWire() {
+    const bankWire = new BankWire();
+    bankWire.reportUrl = this.reportUrl;
+    bankWire.returnUrl = this.returnUrl;
+    bankWire.cancelUrl = this.cancelUrl;
+    bankWire.test = this.test;
+    bankWire.appId = this.appId;
+
+    return bankWire;
   }
 
   paypal() {
