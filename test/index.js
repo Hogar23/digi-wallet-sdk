@@ -72,3 +72,21 @@ describe('BankWire', () => {
     });
   });
 });
+
+const BankWire2 = DW.bankWire();
+BankWire2.amount = 1000;
+BankWire2.description = 'test desc';
+// BankWire.email = 'test@email.com';
+BankWire2.outletId = 143835;
+
+describe('BankWire', () => {
+  it('should test start BankWire payment without email', () => {
+    assert(BankWire2.appId === 'dw_example_sdk_1.0.11', 'app id is changed');
+      BankWire2.start().then((data) => {
+      assert(data.status === true, 'BankWire payment initiation');
+          BankWire2.check().then((checkData) => {
+        assert(checkData.status === false, `Ideal payment is failed: ${checkData.error}`);
+      });
+    });
+  });
+});
