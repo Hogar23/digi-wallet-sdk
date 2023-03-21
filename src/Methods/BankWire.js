@@ -3,7 +3,7 @@ import Transaction from '../Transaction.js';
 export default class BankWire extends Transaction {
     constructor() {
         super();
-        this.email = '';
+        this.email = null;
         this.name = 'Bank Wire';
         this.method = 'SOF';
         this.startApi = 'https://transaction.digiwallet.nl/bankwire/start';
@@ -14,7 +14,7 @@ export default class BankWire extends Transaction {
     }
 
     beforeStart(request) {
-        if (this.email && this.email.length > 0) {
+        if (this.email) {
             const valid = this.validateEmail(this.email);
             if (valid) {
                 request.bind('email', this.email);
