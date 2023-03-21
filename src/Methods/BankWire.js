@@ -13,7 +13,6 @@ export default class BankWire extends Transaction {
         this.version = 2;
     }
 
-
     beforeStart(request) {
         if (this.email && this.email.length > 0) {
             const valid = this.validateEmail(this.email);
@@ -24,6 +23,7 @@ export default class BankWire extends Transaction {
             }
         }
     }
+
     validateEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
