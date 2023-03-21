@@ -15,11 +15,13 @@ export default class BankWire extends Transaction {
 
 
     beforeStart(request) {
-        const valid = this.validateEmail(this.email);
-        if (valid) {
-            request.bind('email', this.email);
-        } else {
-            throw new Error('Email validation failed');
+        if (this.email && this.email.length > 0) {
+            const valid = this.validateEmail(this.email);
+            if (valid) {
+                request.bind('email', this.email);
+            } else {
+                throw new Error('Email validation failed');
+            }
         }
     }
     validateEmail(email) {
